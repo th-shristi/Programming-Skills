@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int lengthOfLastWord(string s) {
+        s.erase(s.find_last_not_of(' ') + 1);
+        size_t last_space = s.rfind(' ');
+    
+    if (last_space == string::npos) {
+        return s.length();
+    } else {
+        return s.substr(last_space + 1).length();
+    }
+}
+
+};
